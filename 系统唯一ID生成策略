@@ -26,23 +26,10 @@ Twitter-Snowflake算法产生的背景相当简单，为了满足Twitter每秒�
 
 首先我们需要一个long类型的变量来保存这个生成的id，第一位固定为0，因为id都是正数嘛，还剩63位，用x位表示毫秒时间戳，用y位表示进程id，用z位表示同一个时间戳下的序列号，x+y+z=63。我们直接看代码
 
-package id.test;
 
 import java.text.SimpleDateFormat;
 import java.util.HashSet;
 import java.util.Set;
-
-/**
- * ClassName:IdGenerator <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017年2月17日 下午3:08:34 <br/>
- * 
- * @author chiwei
- * @version
- * @since JDK 1.6
- * @see
- */
 public class IdGenerator {
 	/**
 	 * SnowFlake算法 64位Long类型生成唯一ID 第一位0，表明正数 2-42，41位，表示毫秒时间戳差值，起始值自定义
@@ -50,9 +37,6 @@ public class IdGenerator {
 	 * 
 	 * 主要就是三部分： 时间戳，进程id，序列号 时间戳41，id10位，序列号12位
 	 * 
-	 * @author chiwei
-	 * @param args
-	 * @since JDK 1.6
 	 */
 
 	private final static long beginTs = 1483200000000L;
